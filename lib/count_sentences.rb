@@ -2,17 +2,17 @@ require 'pry'
 
 class String
 
-  def sentence?
+    def sentence?
     self.end_with?(".")
-  end
+    end
 
-  def question?
+    def question?
     self.end_with?("?")
-  end
+    end
 
-  def exclamation?
+    def exclamation?
     self.end_with?("!") 
-  end
+    end
 
     def count_sentences
     self.split(/[.!?]/).delete_if{|sentence| sentence.length < 2}.count 
